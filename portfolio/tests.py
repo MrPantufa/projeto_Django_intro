@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿from datetime import date
 from django.db import IntegrityError, transaction
 from django.test import TestCase
@@ -90,3 +91,8 @@ class EducationModelTests(TestCase):
             end_date=date(2024, 6, 1),
         )
         self.assertIn("Uni", str(ok))
+=======
+from django.test import TestCase
+
+# Create your tests here.
+>>>>>>> 93166959862e28e169f59cba319d11f93143a296
