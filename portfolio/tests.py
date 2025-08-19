@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿from datetime import date
+from datetime import date
 from django.db import IntegrityError, transaction
 from django.test import TestCase
 
@@ -34,7 +33,7 @@ class ProjectModelTests(TestCase):
         with self.assertRaises(IntegrityError):
             with transaction.atomic():
                 Project.objects.create(
-                    title="Inválido",
+                    title="Inv?lido",
                     start_date=date(2024, 1, 10),
                     end_date=date(2024, 1, 1),
                 )
@@ -48,7 +47,7 @@ class ProjectModelTests(TestCase):
 
 class ProjectLinkModelTests(TestCase):
     def test_unique_label_per_project(self):
-        p = Project.objects.create(title="Portfólio")
+        p = Project.objects.create(title="Portf?lio")
         ProjectLink.objects.create(project=p, label="GitHub", url="https://example.com")
         with self.assertRaises(IntegrityError):
             with transaction.atomic():
@@ -91,8 +90,3 @@ class EducationModelTests(TestCase):
             end_date=date(2024, 6, 1),
         )
         self.assertIn("Uni", str(ok))
-=======
-from django.test import TestCase
-
-# Create your tests here.
->>>>>>> 93166959862e28e169f59cba319d11f93143a296
