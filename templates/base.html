@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Async Views{% endblock %}</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; margin: 40px; }
+    .box { max-width: 560px; }
+    button { padding: 8px 14px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>
